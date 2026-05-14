@@ -11,13 +11,14 @@ This project covers training, evaluation, Optuna tuning, video inference, Gradio
 ## Demo
 
 - Hugging Face Space: [Segmentation_Unet_and_F8CN](https://huggingface.co/spaces/piopanjaitan/Segmentation_Unet_and_F8CN)
+- Presentation PDF: [U-Net vs FCN-ResNet50 Presentation](presentation_unet_vs_fcn_resnet50.pdf)
 
 ## Main Files
 
-- Main notebook: [` Self-Driving Car - Semantic Segmentation.ipynb`](<%20Self-Driving%20Car%20-%20Semantic%20Segmentation.ipynb>)
-- FCN training notebook: [`training_self_driving_car_v2.ipynb`](training_self_driving_car_v2.ipynb)
-- FCN Optuna notebook: [`self_driving_car_v2_optuna.ipynb`](self_driving_car_v2_optuna.ipynb)
-- Model checkpoint: [`best_self_driving_model.pth`](best_self_driving_model.pth)
+- Main notebook: [`self_driving_car_unet.ipynb`](self_driving_car_unet.ipynb)
+- FCN training notebook: [`fcn_resnet50_training.ipynb`](fcn_resnet50_training.ipynb)
+- FCN Optuna notebook: [`fcn_resnet50_optuna.ipynb`](fcn_resnet50_optuna.ipynb)
+- Model checkpoint: [`best_unet_model.pth`](best_unet_model.pth)
 
 ## Classes
 
@@ -60,39 +61,44 @@ The dataset contains 12 classes:
 
 ## Visual Results
 
+### Model Preview Comparison
+
+![Model Preview Comparison](assets/comparison_banner.jpg)
+
 ### U-Net Video Preview
 
-![U-Net Preview](assets/unet_preview_small.gif)
+![U-Net Preview](assets/preview_unet_small.gif)
 
 ### FCN-ResNet50 Video Preview
 
-![FCN Preview](assets/fcn_preview_small.gif)
+![FCN Preview](assets/preview_fcn_small.gif)
 
 ### Preview Thumbnails
 
 | U-Net | FCN-ResNet50 |
 |---|---|
-| ![U-Net Thumbnail](assets/unet_thumbnail.jpg) | ![FCN Thumbnail](assets/fcn_thumbnail.jpg) |
+| ![U-Net Thumbnail](assets/thumbnail_unet.jpg) | ![FCN Thumbnail](assets/thumbnail_fcn.jpg) |
 
 ### Quick Comparison
 
 | Model | Pixel Accuracy | Macro F1 | Main Video File |
 |---|---:|---:|---|
-| U-Net | `0.8614` | `0.6658` | [`assets/nD_6_result_unet_web.mp4`](assets/nD_6_result_unet_web.mp4) |
-| FCN-ResNet50 | `0.9137` | `0.7157` | [`nD_6_result_f8cn.mp4`](nD_6_result_f8cn.mp4) |
+| U-Net | `0.8614` | `0.6658` | [`assets/video_unet_web.mp4`](assets/video_unet_web.mp4) |
+| FCN-ResNet50 | `0.9137` | `0.7157` | [`video_fcn_resnet50_output.mp4`](video_fcn_resnet50_output.mp4) |
 
 ## Videos
 
-- U-Net render output: [`nD_6_result_unet.mp4`](nD_6_result_unet.mp4)
-- U-Net browser-friendly output: [`assets/nD_6_result_unet_web.mp4`](assets/nD_6_result_unet_web.mp4)
-- FCN-ResNet50 render output: [`nD_6_result_f8cn.mp4`](nD_6_result_f8cn.mp4)
-- Gradio render output: [`nD_1_gradio_result.mp4`](nD_1_gradio_result.mp4)
-- U-Net preview GIF: [`assets/unet_preview.gif`](assets/unet_preview.gif)
-- FCN preview GIF: [`assets/fcn_preview.gif`](assets/fcn_preview.gif)
-- U-Net preview GIF small: [`assets/unet_preview_small.gif`](assets/unet_preview_small.gif)
-- FCN preview GIF small: [`assets/fcn_preview_small.gif`](assets/fcn_preview_small.gif)
-- U-Net thumbnail: [`assets/unet_thumbnail.jpg`](assets/unet_thumbnail.jpg)
-- FCN thumbnail: [`assets/fcn_thumbnail.jpg`](assets/fcn_thumbnail.jpg)
+- U-Net render output: [`video_unet_output.mp4`](video_unet_output.mp4)
+- U-Net browser-friendly output: [`assets/video_unet_web.mp4`](assets/video_unet_web.mp4)
+- FCN-ResNet50 render output: [`video_fcn_resnet50_output.mp4`](video_fcn_resnet50_output.mp4)
+- Gradio render output: [`video_gradio_output.mp4`](video_gradio_output.mp4)
+- U-Net preview GIF: [`assets/preview_unet.gif`](assets/preview_unet.gif)
+- FCN preview GIF: [`assets/preview_fcn.gif`](assets/preview_fcn.gif)
+- U-Net preview GIF small: [`assets/preview_unet_small.gif`](assets/preview_unet_small.gif)
+- FCN preview GIF small: [`assets/preview_fcn_small.gif`](assets/preview_fcn_small.gif)
+- U-Net thumbnail: [`assets/thumbnail_unet.jpg`](assets/thumbnail_unet.jpg)
+- FCN thumbnail: [`assets/thumbnail_fcn.jpg`](assets/thumbnail_fcn.jpg)
+- Model comparison banner: [`assets/comparison_banner.jpg`](assets/comparison_banner.jpg)
 
 ## Installation
 
@@ -105,7 +111,7 @@ pip install -r requirements.txt
 ## How to Run
 
 1. Open the main notebook:
-   - [` Self-Driving Car - Semantic Segmentation.ipynb`](<%20Self-Driving%20Car%20-%20Semantic%20Segmentation.ipynb>)
+   - [`self_driving_car_unet.ipynb`](self_driving_car_unet.ipynb)
 2. Run dataset validation, EDA, model, training, evaluation, and video cells in order.
 3. Use the Gradio section in the notebook or the Hugging Face Space for demo testing.
 
@@ -116,17 +122,23 @@ pip install -r requirements.txt
 ├── README.md
 ├── requirements.txt
 ├── LICENSE
-├── best_self_driving_model.pth
-├── nD_1_gradio_result.mp4
-├── nD_6_result_f8cn.mp4
-├── nD_6_result_unet.mp4
-├── self_driving_car_v2_optuna.ipynb
-├── training_self_driving_car_v2.ipynb
-├──  Self-Driving Car - Semantic Segmentation.ipynb
+├── best_unet_model.pth
+├── fcn_resnet50_optuna.ipynb
+├── fcn_resnet50_training.ipynb
+├── presentation_unet_vs_fcn_resnet50.pdf
+├── self_driving_car_unet.ipynb
+├── video_fcn_resnet50_output.mp4
+├── video_gradio_output.mp4
+├── video_unet_output.mp4
 └── assets/
-    ├── fcn_preview.gif
-    ├── nD_6_result_unet_web.mp4
-    └── unet_preview.gif
+    ├── comparison_banner.jpg
+    ├── preview_fcn.gif
+    ├── preview_fcn_small.gif
+    ├── preview_unet.gif
+    ├── preview_unet_small.gif
+    ├── thumbnail_fcn.jpg
+    ├── thumbnail_unet.jpg
+    └── video_unet_web.mp4
 ```
 
 ## Notes
