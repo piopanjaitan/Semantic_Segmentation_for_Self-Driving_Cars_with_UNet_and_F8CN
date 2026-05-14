@@ -146,3 +146,6 @@ pip install -r requirements.txt
 - U-Net notebook includes video rendering, playback, and Gradio integration.
 - FCN comparison in this repository uses `torchvision.models.segmentation.fcn_resnet50`.
 - Browser playback can still depend on codec support in the runtime environment.
+
+## 👤 Penulis
+Ridwan Pioneer Panjaitan
