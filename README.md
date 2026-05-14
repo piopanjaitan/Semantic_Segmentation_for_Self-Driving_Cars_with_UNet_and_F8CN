@@ -14,10 +14,10 @@ This project covers training, evaluation, Optuna tuning, video inference, Gradio
 
 ## Main Files
 
-- Main notebook: [`from_serverAI/ Self-Driving Car - Semantic Segmentation.ipynb`](<from_serverAI/%20Self-Driving%20Car%20-%20Semantic%20Segmentation.ipynb>)
-- FCN training notebook: [`from_serverAI/training_self_driving_car_v2.ipynb`](from_serverAI/training_self_driving_car_v2.ipynb)
-- FCN Optuna notebook: [`from_serverAI/self_driving_car_v2_optuna.ipynb`](from_serverAI/self_driving_car_v2_optuna.ipynb)
-- Model checkpoint: [`from_serverAI/best_self_driving_model.pth`](from_serverAI/best_self_driving_model.pth)
+- Main notebook: [` Self-Driving Car - Semantic Segmentation.ipynb`](<%20Self-Driving%20Car%20-%20Semantic%20Segmentation.ipynb>)
+- FCN training notebook: [`training_self_driving_car_v2.ipynb`](training_self_driving_car_v2.ipynb)
+- FCN Optuna notebook: [`self_driving_car_v2_optuna.ipynb`](self_driving_car_v2_optuna.ipynb)
+- Model checkpoint: [`best_self_driving_model.pth`](best_self_driving_model.pth)
 
 ## Classes
 
@@ -60,25 +60,22 @@ The dataset contains 12 classes:
 
 ## Visual Results
 
-### Contact Sheet
+### U-Net Video Preview
 
-![Segmentation Contact Sheet](docs/assets/images/segmentation_contact_sheet.jpg)
+![U-Net Preview](assets/unet_preview.gif)
 
-### Alternative Render Style
+### FCN-ResNet50 Video Preview
 
-![Felim Style Contact Sheet](docs/assets/images/segmentation_contact_sheet_felim_style.jpg)
-
-### Optuna
-
-| Optimization History | Parameter Importance |
-|---|---|
-| ![Optuna History](docs/assets/images/optuna_optimization_history.png) | ![Optuna Importance](docs/assets/images/optuna_parameter_importance.png) |
+![FCN Preview](assets/fcn_preview.gif)
 
 ## Videos
 
-- Input video: [`docs/assets/videos/input_demo.mp4`](docs/assets/videos/input_demo.mp4)
-- U-Net render output: [`docs/assets/videos/unet_render_output.mp4`](docs/assets/videos/unet_render_output.mp4)
-- Gradio render output: [`docs/assets/videos/gradio_render_output.mp4`](docs/assets/videos/gradio_render_output.mp4)
+- U-Net render output: [`nD_6_result_unet.mp4`](nD_6_result_unet.mp4)
+- U-Net browser-friendly output: [`assets/nD_6_result_unet_web.mp4`](assets/nD_6_result_unet_web.mp4)
+- FCN-ResNet50 render output: [`nD_6_result_f8cn.mp4`](nD_6_result_f8cn.mp4)
+- Gradio render output: [`nD_1_gradio_result.mp4`](nD_1_gradio_result.mp4)
+- U-Net preview GIF: [`assets/unet_preview.gif`](assets/unet_preview.gif)
+- FCN preview GIF: [`assets/fcn_preview.gif`](assets/fcn_preview.gif)
 
 ## Installation
 
@@ -91,7 +88,7 @@ pip install -r requirements.txt
 ## How to Run
 
 1. Open the main notebook:
-   - [`from_serverAI/ Self-Driving Car - Semantic Segmentation.ipynb`](<from_serverAI/%20Self-Driving%20Car%20-%20Semantic%20Segmentation.ipynb>)
+   - [` Self-Driving Car - Semantic Segmentation.ipynb`](<%20Self-Driving%20Car%20-%20Semantic%20Segmentation.ipynb>)
 2. Run dataset validation, EDA, model, training, evaluation, and video cells in order.
 3. Use the Gradio section in the notebook or the Hugging Face Space for demo testing.
 
@@ -102,17 +99,17 @@ pip install -r requirements.txt
 ├── README.md
 ├── requirements.txt
 ├── LICENSE
-├── nD_6.mp4
-├── from_serverAI/
-│   ├──  Self-Driving Car - Semantic Segmentation.ipynb
-│   ├── training_self_driving_car_v2.ipynb
-│   ├── self_driving_car_v2_optuna.ipynb
-│   ├── best_self_driving_model.pth
-│   ├── nD_6_result.mp4
-│   └── nD_1_gradio_result.mp4
-└── docs/assets/
-    ├── images/
-    └── videos/
+├── best_self_driving_model.pth
+├── nD_1_gradio_result.mp4
+├── nD_6_result_f8cn.mp4
+├── nD_6_result_unet.mp4
+├── self_driving_car_v2_optuna.ipynb
+├── training_self_driving_car_v2.ipynb
+├──  Self-Driving Car - Semantic Segmentation.ipynb
+└── assets/
+    ├── fcn_preview.gif
+    ├── nD_6_result_unet_web.mp4
+    └── unet_preview.gif
 ```
 
 ## Notes
