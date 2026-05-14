@@ -62,11 +62,24 @@ The dataset contains 12 classes:
 
 ### U-Net Video Preview
 
-![U-Net Preview](assets/unet_preview.gif)
+![U-Net Preview](assets/unet_preview_small.gif)
 
 ### FCN-ResNet50 Video Preview
 
-![FCN Preview](assets/fcn_preview.gif)
+![FCN Preview](assets/fcn_preview_small.gif)
+
+### Preview Thumbnails
+
+| U-Net | FCN-ResNet50 |
+|---|---|
+| ![U-Net Thumbnail](assets/unet_thumbnail.jpg) | ![FCN Thumbnail](assets/fcn_thumbnail.jpg) |
+
+### Quick Comparison
+
+| Model | Pixel Accuracy | Macro F1 | Main Video File |
+|---|---:|---:|---|
+| U-Net | `0.8614` | `0.6658` | [`assets/nD_6_result_unet_web.mp4`](assets/nD_6_result_unet_web.mp4) |
+| FCN-ResNet50 | `0.9137` | `0.7157` | [`nD_6_result_f8cn.mp4`](nD_6_result_f8cn.mp4) |
 
 ## Videos
 
@@ -76,6 +89,10 @@ The dataset contains 12 classes:
 - Gradio render output: [`nD_1_gradio_result.mp4`](nD_1_gradio_result.mp4)
 - U-Net preview GIF: [`assets/unet_preview.gif`](assets/unet_preview.gif)
 - FCN preview GIF: [`assets/fcn_preview.gif`](assets/fcn_preview.gif)
+- U-Net preview GIF small: [`assets/unet_preview_small.gif`](assets/unet_preview_small.gif)
+- FCN preview GIF small: [`assets/fcn_preview_small.gif`](assets/fcn_preview_small.gif)
+- U-Net thumbnail: [`assets/unet_thumbnail.jpg`](assets/unet_thumbnail.jpg)
+- FCN thumbnail: [`assets/fcn_thumbnail.jpg`](assets/fcn_thumbnail.jpg)
 
 ## Installation
 
